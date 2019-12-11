@@ -1,0 +1,33 @@
+.form_signup{
+    padding-left:300px ;
+    padding-right:300px ;
+    padding-top: 100px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.form-control,button,h1{
+    margin: 15px;;
+}
+
+input{
+    font-family: 'Open Sans', sans-serif;
+}
+
+@media(min-width:320px){
+    .container{ width:1000px;} 
+}
+
+@media(min-width:481px){
+    .container{ width:1000px;} 
+}
+
+@media(min-width:641px){
+    .container-fluid{ width: 1000px;} 
+}
+@media(min-width:961px){
+    .container{ width:1200px;} 
+}
+@media(min-width:1000px){
+    .container{ width:1000px;} 
+}
+
