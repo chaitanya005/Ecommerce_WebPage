@@ -1,3 +1,7 @@
+<?php
+    require 'includes/common.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,19 +15,9 @@
     <title>Document</title>
 </head>
 <body>
-        <nav class="navbar navbar-inverse navbar-fixed-top">
-                <div class="container">
-                        <div class="navbar-header">
-                                <a href="index.html" class="navbar-brand">Lifestyle store</a>
-                        </div>
-                        <ul class="nav navbar-nav navbar-right">
-                                <li><a href="cart.html"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
-                                <li><a href="settings.html"><span class="glyphicon glyphicon-user"></span> Settings</a></li>
-                                <li><a href="logout.html"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
-                                
-                        </ul>
-                </div>
-        </nav>
+        <?php
+            include "includes/header.php";
+        ?>
 
     <div class="container">
         <div class="jumbotron">
@@ -131,10 +125,8 @@
         
     </div>
 
-    <footer class="navbar-inverse navbar-fixed-bottom">
-            <div class="container">
-                <center  style="color: white;">Copyright © Lifestyle Store. All Rights Reserved | Contact Us: +91 90000 00000</center>
-            </div>
-    </footer>
+    <?php
+        include 'includes/footer.php';
+    ?>
 </body>
 </html>

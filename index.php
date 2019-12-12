@@ -1,3 +1,11 @@
+
+<?php
+    require 'includes/common.php';
+    if(isset($_SESSION['email'])){
+        header('location:products.php');
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,18 +15,25 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/settings.css">
-    <title>Settings</title>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Home | Page</title>
 </head>
 <body>
-    <div class="container">
-        <div class="jumbotron">
-                <h1>YaY! Your order has Confirmed.</h1>
-                <h3>Thank you for shopping with us!</h3>
-                <p><a href="products.html">Click here</a> to purchase any other item.</p>
+
+    
+    <?php
+        include "includes/header.php";
+    ?>
+    <div id="banner_image">
+        <div class="container">
+            <div id="banner-content">
+                <a href="products.php" class="btn btn-danger btn-lg active">Shop now</a>
+            </div>
         </div>
-        
     </div>
+
+    <?php
+        include 'includes/footer.php';
+    ?>
 </body>
 </html>
