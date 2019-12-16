@@ -1,5 +1,14 @@
 <?php
     require 'includes/common.php';
+    if(!isset($_SESSION['email'])){
+        header('location:index.php');
+    }
+    
+    $user_id = $_SESSION['user_id'];
+    $item_ids_string = $_GET['itemsid'];
+    
+    $query = "UPDATE users_items SET status='Confirmed' WHERE user_id=" . $user_id . " AND item_id IN (" . $item_ids_string . ") and status='Added to cart'";
+    mysqli_query($con, $query) or die($mysqli_error($con));
 ?>
 
 <!DOCTYPE html>
@@ -20,7 +29,7 @@
         <div class="jumbotron">
                 <h1>YaY! Your order has Confirmed.</h1>
                 <h3>Thank you for shopping with us!</h3>
-                <p><a href="products.php">Click here</a> to purchase any other item.</p>
+                <p><a href="products.php">Click here</a> for continue the shopping.</p>
         </div>
         
     </div>

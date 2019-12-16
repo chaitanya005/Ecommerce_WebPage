@@ -23,6 +23,7 @@
     
     <?php
         include "includes/header.php";
+        
     ?>
     <div id="banner_image">
         <div class="container">
@@ -31,9 +32,10 @@
             </div>
         </div>
     </div>
-
+    
     <?php
         include 'includes/footer.php';
     ?>
+    
 </body>
 </html>
